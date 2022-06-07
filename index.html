@@ -1,16 +1,42 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Incuding external CSS file style.css which MUST be in the same folder/location as this HTML file -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+<body>
+  <h1> Simple Interest Calculator</h1>
+  <!-- Form -->
+  <form>
+    <!-- label text -->
+    <label for="principal">Amount</label>
+    <!-- input type number field -->
+    <input type="number" id="principal"><br>
+    <label for="rate">Rate</label>
+    <input type="number" id="rate"><br>
+    <label for="years">No. of Years</label>
+    <input type="number" id="years"><br>
+    <!-- Output/result will be shown here -->
+    <label for="result">Interest:</label>
+     <div id="result"></div><br>
+    <!-- button which has onclick attribute set to compute() function-->
+    <!-- So, compute() function in javascript code will run everytime this button is clicked -->
+    <input type="button" value="Compute" onclick="compute()">
+  </form>
+
+  <!-- Range slider -->
+  <div class="rangeslider">
+    <input type="range" min="1" max="100" value="50" class="slider" id="slider"><span id="rangeOutput"></span>
+  </div>
+
+  <!-- Including  External JavaScript file script.js which  MUST be in the same location/folder as this  HTML file -->
+  <script src="script.js"></script>
+</body>
+
 </html>
